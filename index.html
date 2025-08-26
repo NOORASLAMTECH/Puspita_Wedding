@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puspita Wedding Gallery - Make Up & Rias Pengantin Profesional</title>
+
+    <!--Favicon / Logo -->
+    <link rel="icon" href="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3e%3ccircle cx='50' cy='50' r='48' fill='black'/%3e%3ctext x='50' y='70' font-family='Cormorant Garamond, serif' font-size='60' fill='white' text-anchor='middle'%3eP%3c/text%3e%3c/svg%3e">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins & Cormorant Garamond -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Prism.js for Syntax Highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+
+    <!-- Menghubungkan ke File CSS Kustom -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Konfigurasi Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-white text-gray-800">
+
+    <!-- HEADER & NAVIGASI -->
+    <header id="home" class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="font-serif text-3xl font-bold text-black">
+                Puspita Wedding Gallery
+            </a>
+            <!-- Navigasi Desktop -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="index.html" class="text-gray-600 hover:text-black transition duration-300">Beranda</a>
+                <!-- Dropdown Layanan -->
+                <div class="relative">
+                    <button id="layanan-dropdown-button" class="text-gray-600 hover:text-black transition duration-300 flex items-center">
+                        Layanan
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="layanan-dropdown-menu" class="absolute hidden bg-white shadow-lg rounded-md mt-2 py-2 w-48 z-10">
+                        <a href="#layanan" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-black">Layanan Utama</a>
+                        <a href="#pertunangan" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-black">Paket Engagement</a>
+                        <a href="#kursus" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-black">Kursus Private</a>
+                    </div>
+                </div>
+                <a href="#galeri" class="text-gray-600 hover:text-black transition duration-300">Galeri</a>
+                <a href="#tentang" class="text-gray-600 hover:text-black transition duration-300">Tentang Kami</a>
+                <a href="#testimoni" class="text-gray-600 hover:text-black transition duration-300">Testimoni</a>
+                <a href="#kontak" class="text-gray-600 hover:text-black transition duration-300">Kontak</a>
+            </nav>
+            <!-- Tombol Hamburger untuk Mobile -->
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Navigasi Mobile (tersembunyi) -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#home" class="mobile-link block py-2 text-gray-600 hover:text-black">Beranda</a>
+            <a href="#layanan" class="mobile-link block py-2 text-gray-600 hover:text-black">Layanan Utama</a>
+            <a href="#pertunangan" class="mobile-link block py-2 text-gray-600 hover:text-black">Paket Engagement</a>
+            <a href="#kursus" class="mobile-link block py-2 text-gray-600 hover:text-black">Kursus Private</a>
+            <a href="#galeri" class="mobile-link block py-2 text-gray-600 hover:text-black">Galeri</a>
+            <a href="#tentang" class="mobile-link block py-2 text-gray-600 hover:text-black">Tentang Kami</a>
+            <a href="#testimoni" class="mobile-link block py-2 text-gray-600 hover:text-black">Testimoni</a>
+            <a href="#kontak" class="mobile-link block py-2 text-gray-600 hover:text-black">Kontak</a>
+        </div>
+    </header>
+
+    <main>
+        <!--HERO SECTION -->
+        <section class="relative h-[90vh] min-h-[600px] flex items-center justify-center">
+            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat z-0" style="background-image: url('images/bg_hero.jpeg');">
+                <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+            <div class="container mx-auto px-6 text-center z-10">
+                <h1 class="font-serif text-6xl md:text-8xl text-white font-bold tracking-wider">Puspita Wedding Gallery</h1>
+            </div>
+        </section>
+
+        <!--TENTANG KAMI -->
+        <section id="tentang" class="py-24 bg-white fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div class="text-center md:text-left">
+                        <h2 class="font-serif text-4xl md:text-5xl font-bold text-black mb-6">Tentang Puspita Wedding</h2>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Puspita Wedding adalah solusi lengkap untuk kebutuhan penampilan Anda di hari istimewa. Kami menyediakan layanan makeup profesional untuk berbagai acara penting seperti pernikahan, wisuda, dan lamaran, sekaligus menyewakan koleksi gaun dan kebaya pilihan yang elegan. Fokus kami adalah membuat Anda tampil memukau tanpa ribet. 
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                             Puspita Wedding siap memberikan pelayanan rias terbaik yang dipadukan dengan busana dan dekorasi terbaik. Kami ingin setiap momen bahagia Anda terasa lebih indah, berkesan, dan meninggalkan kenangan manis yang tak terlupakan. Hubungi kami untuk mulai mewujudkan penampilan impian Anda.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="images/bg_tentang.jpeg" alt="Tim Puspita Wedding" class="rounded-lg shadow-xl w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--LAYANAN UTAMA -->
+        <section id="layanan" class="py-24 bg-gray-50 fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-black">Layanan Utama Puspita Wedding</h2>
+                    <p class="text-gray-600 mt-3 max-w-2xl mx-auto">Menyempurnakan setiap momen berharga Anda dengan sentuhan profesional.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col h-full transform hover:-translate-y-2 transition duration-500">
+                        <img src="images/bg_pengantin.jpeg" alt="Make Up Pengantin" class="w-full h-auto object-cover">
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h3 class="font-serif text-2xl font-bold mb-3 text-black">Make Up Pengantin</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Setiap calon pengantin pasti ingin tampil istimewa di hari pernikahannya. Di Puspita Wedding, kami percaya kecantikan terbaik adalah saat Anda tetap terlihat seperti diri sendiri, hanya lebih anggun dan bercahaya.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col h-full transform hover:-translate-y-2 transition duration-500">
+                        <img src="images/bg_wisuda.jpeg" alt="Make Up Wisuda" class="w-full h-auto object-cover">
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h3 class="font-serif text-2xl font-bold mb-3 text-black">Make Up Wisuda</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Rayakan kelulusan Anda. Wisuda adalah momen penting yang penuh kebanggaan. Untuk itu, kami hadir dengan riasan yang segar, natural dan tahan lama dan tidak mudah luntur tampil cantik dan anggun.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col h-full transform hover:-translate-y-2 transition duration-500">
+                        <img src="images/bg_acara_lain.jpeg" alt="Make Up Acara Khusus" class="w-full h-auto object-cover">
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h3 class="font-serif text-2xl font-bold mb-3 text-black">Make Up Acara Khusus</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Setiap acara spesial butuh penampilan yang percaya diri. Puspita Wedding siap memberikan riasan sesuai kebutuhan, mulai dari acara formal, fashion show, hingga lomba. Kami menyesuaikan gaya make up agar tetap nyaman dipakai, namun tetap terlihat menawan di setiap kesempatan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--PAKET PERTUNANGAN -->
+        <section id="pertunangan" class="py-24 bg-white fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-black">Paket Engagement dan Sewa Busana Puspita Wedding</h2>
+                    <p class="text-gray-600 mt-3 max-w-2xl mx-auto">Tampil menawan di hari spesial Anda menuju jenjang pernikahan.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 items-center mb-12">
+                    <div>
+                        <div class="bg-gray-50 rounded-lg p-6 mb-4">
+                            <h4 class="font-bold text-lg text-black">Paket Engagement Komplit</h4>
+                            <p class="text-sm text-gray-600">Puspita Wedding menawarkan paket pertunangan lengkap sebagai solusi praktis untuk hari spesial Anda. Paket ini sudah termasuk riasan wajah yang menawan, sepasang busana serasi untuk Anda dan pasangan, serta dekorasi cantik sebagai latar acara.</p>
+                            <p class="font-serif text-2xl font-bold mt-2 text-black">Rp 1.500.000</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <h4 class="font-bold text-lg text-black">Penyewaan Busana Pengantin, Kebaya dan Baju Adat.
+                            </h4>
+                            <p class="text-sm text-gray-600">Puspita Wedding Gallery menyediakan layanan penyewaan busana pengantin, kebaya modern dan tradisional, berbagai baju adat dari berbagai daerah di Indonesia. kami juga menyediakan perlengkapan pendukung seperti aksesoris, selop, dan perhiasan agar tampilan Anda semakin sempurna.</p>
+                            <p class="font-serif text-2xl font-bold mt-2 text-black">(Konsultasi langsung di WhatsApp)</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="images/dummy_pertunangan1.jpg">
+                        <img src="images/dummy_pertunangan2.jpg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--KURSUS PRIVATE -->
+        <section id="kursus" class="py-24 bg-gray-50 fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-black">Kursus Make Up Private</h2>
+                    <p class="text-gray-600 mt-3 max-w-2xl mx-auto">Asah kemampuan merias Anda langsung bersama kami di Puspita Wedding.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 items-center mb-12">
+                     <div class="grid grid-cols-2 gap-4">
+                        <img src="images/dummy_bg1.jpg">
+                        <img src="images/dummy_bg2.jpg">
+                    </div>
+                    <div>
+                        <div class="bg-white rounded-lg p-6 mb-4">
+                            <h4 class="font-bold text-lg text-black">Kelas Make Up Wisuda</h4>
+                            <p class="text-sm text-gray-600">Dapatkan 8 sesi pelatihan (2 jam per sesi) dengan fasilitas make up lengkap yang sudah kami sediakan. Dapatkan pengalaman praktik langsung dengan model Anda (misal Kerabat atau Saudara), sertifikat kelulusan, dan bonus satu set brush make up gratis!.</p>
+                            <p class="font-serif text-2xl font-bold mt-2 text-black">Rp 3.000.000</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-6">
+                            <h4 class="font-bold text-lg text-black">Kelas Profesional Wedding</h4>
+                            <p class="text-sm text-gray-600">Nikmati 10 sesi pelatihan profesional (2 jam per sesi) dengan fasilitas make up lengkap yang telah kami sediakan. Dapatkan pengalaman praktik langsung dengan model Anda (misal kerabat atau saudara), sertifikat kelulusan, dan bonus eksklusif berupa palet eye shadow profesional!</p>
+                            <p class="font-serif text-2xl font-bold mt-2 text-black">Rp 4.500.000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--GALERI KARYA KAMI -->
+        <section id="galeri" class="py-24 bg-white fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-black">Galeri Karya Puspita Wedding</h2>
+                    <p class="text-gray-600 mt-3 max-w-2xl mx-auto">Lihat beberapa tatanan busana dan riasan wajah yang telah kami ciptakan untuk klien-klien kami.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <a href="images/pengantin4.jpeg" class="gallery-item group aspect-[3/4] relative overflow-hidden rounded-lg shadow-lg cursor-pointer"><img src="images/pengantin4.jpeg" alt="Hasil Make Up Pengantin 1" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div></a>
+                    <a href="images/pengantin1.jpeg" class="gallery-item group aspect-[3/4] relative overflow-hidden rounded-lg shadow-lg cursor-pointer"><img src="images/pengantin1.jpeg" alt="Hasil Make Up Pengantin 2" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div></a>
+                    <a href="images/pengantin2.jpeg" class="gallery-item group aspect-[3/4] relative overflow-hidden rounded-lg shadow-lg cursor-pointer"><img src="images/pengantin2.jpeg" alt="Hasil Make Up Pengantin 3" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div></a>
+                    <a href="images/pengantin3.jpeg" class="gallery-item group aspect-[3/4] relative overflow-hidden rounded-lg shadow-lg cursor-pointer"><img src="images/pengantin3.jpeg" alt="Hasil Make Up Pengantin 4" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div></a>
+                    <a href="images/pengantin5.jpeg" class="gallery-item group aspect-[3/4] relative overflow-hidden rounded-lg shadow-lg cursor-pointer"><img src="images/pengantin5.jpeg" alt="Hasil Make Up Pengantin 5" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div></a>
+                    <a href="images/pengantin6.jpeg" class="gallery-item group aspect-[3/4] relative overflow-hidden rounded-lg shadow-lg cursor-pointer"><img src="images/pengantin6.jpeg" alt="Hasil Make Up Pengantin 6" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div></a>
+                    <a href="images/pengantin7.jpeg" class="gallery-item group aspect-[3/4] relative overflow-hidden rounded-lg shadow-lg cursor-pointer"><img src="images/pengantin7.jpeg" alt="Hasil Make Up Pengantin 7" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div></a>
+                    <a href="images/pengantin8.jpeg" class="gallery-item group aspect-[3/4] relative overflow-hidden rounded-lg shadow-lg cursor-pointer"><img src="images/pengantin8.jpeg" alt="Hasil Make Up Pengantin 8" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div></a>
+                </div>
+            </div>
+        </section>
+
+        <!--TESTIMONI -->
+        <section id="testimoni" class="py-24 bg-gray-50 fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-black">Apa Kata Mereka?</h2>
+                    <p class="text-gray-600 mt-3">Kepuasan klien adalah prioritas utama kami.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white p-8 rounded-lg shadow-lg"><img src="images/profil2.jpg" alt="Pelanggan 1" class="w-24 h-24 rounded-full mx-auto mb-5 border-4 border-white shadow-md"><p class="text-gray-600 italic mb-4">"Hasil makeup di hari pernikahan saya benar-benar memuaskan! Tahan lama, terlihat natural tapi tetap anggun. Tim Puspita Wedding juga ramah dan bikin saya merasa tenang sepanjang persiapan. Terima kasih sudah membuat momen saya semakin sempurna."</p><h4 class="font-bold text-black font-sans">- Amanda M.P</h4></div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg"><img src="images/profil3.jpg" alt="Pelanggan 2" class="w-24 h-24 rounded-full mx-auto mb-5 border-4 border-white shadow-md"><p class="text-gray-600 italic mb-4">"Dekorasi dan riasan untuk acara pertunangan saya luar biasa. Semua detail sesuai dengan yang saya inginkan, bahkan lebih bagus dari ekspektasi. Banyak tamu yang memuji hasilnya. Terima kasih Puspita Wedding, acaranya jadi makin berkesan!"</p><h4 class="font-bold text-black font-sans">- Bella A.</h4></div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg"><img src="images/profil4.jpg" alt="Pelanggan 3" class="w-24 h-24 rounded-full mx-auto mb-5 border-4 border-white shadow-md"><p class="text-gray-600 italic mb-4">"Belajar makeup di Puspita Wedding sangat menyenangkan. Penjelasannya mudah dipahami, praktiknya seru, dan pengajarnya sabar. Sekarang saya jadi lebih percaya diri menerima klien. Bonus alat makeup-nya juga sangat membantu!"</p><h4 class="font-bold text-black font-sans">- Citra S.</h4></div>
+                </div>
+            </div>
+        </section>
+
+        <!--KONTAK & LOKASI -->
+        <section id="kontak" class="py-24 bg-white fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-black">Hubungi Kami</h2>
+                    <p class="text-gray-600 mt-3 max-w-2xl mx-auto">Kami siap membantu mewujudkan hari istemewa dan berkesan anda. Jangan ragu untuk berkonsultasi!</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="flex flex-col justify-center"><a href="https://wa.me/6285869846490?text=Halo%20Puspita%20Wedding,%20saya%20mau%20bertanya%20tentang%20layanan%20make%20up." target="_blank" class="w-full text-center bg-green-500 text-white font-bold py-4 px-8 rounded-lg hover:bg-green-600 transition duration-300 mb-8 text-lg flex items-center justify-center shadow-lg"><svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path clip-rule="evenodd" fill-rule="evenodd" d="M18.403 5.633A8.919 8.919 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.976 8.974 0 1.582.413 3.126 1.198 4.488L3 21l4.629-1.224a8.948 8.948 0 0 0 4.424 1.193h.006c4.947 0 8.975-4.027 8.975-8.973 0-2.39-.936-4.634-2.625-6.333Zm-6.35 13.812h-.003a7.446 7.446 0 0 1-3.798-1.041l-.272-.162-2.824.741.753-2.753-.177-.282a7.44 7.44 0 0 1-1.141-3.971c0-4.102 3.337-7.44 7.44-7.44a7.425 7.425 0 0 1 5.263 2.176 7.403 7.403 0 0 1 2.176 5.262c-.002 4.103-3.339 7.44-7.442 7.44Zm4.093-5.359c-.225-.113-1.327-.655-1.533-.73-.205-.075-.354-.112-.504.112s-.58.729-.711.879-.262.168-.486.056c-.225-.113-.947-.349-1.804-1.113-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393.112-.131.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666-.181-.435-.366-.377-.504-.383a.965.965 0 0 0-.428-.008.784.784 0 0 0-.558.262c-.187.188-.711.693-.711 1.696s.729 1.971.82 2.119.712 1.696 1.73 2.404c.142.102.268.163.38.21.316.135.6.196.793.243.28.07.492.06.656-.038.187-.112.58-.485.662-.952.083-.467.083-.867.056-.952s-.083-.15-.168-.262Z"/></svg>Konsultasi via WhatsApp</a><p class="text-center text-gray-700 mb-4">Atau temukan kami di media sosial:</p><div class="flex justify-center space-x-6"><a href="https://www.instagram.com/puspitaawedding?igsh=ZTJ3a2k5YzlwdjVk" target="_blank" class="text-gray-500 hover:text-black transition duration-300"><svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6zm6.406-11.845a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z" clip-rule="evenodd" /></svg><span class="sr-only">Instagram</span></a><a href="#" target="_blank" class="text-gray-500 hover:text-black transition duration-300"><svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg><span class="sr-only">Facebook</span></a></div></div>
+                    <div class="rounded-lg shadow-xl overflow-hidden h-96"><iframe src="https://www.google.com/maps/embed?pb=!4v1756053403126!6m8!1m7!1sPlNQHIcWb4KLKoix2Zl1Lg!2m2!1d-6.884303347248423!2d110.8680829705923!3f337.4773880173146!4f4.615384615384613!5f0.7820865974627469" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!--FOOTER -->
+    <footer class="bg-black text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="text-center">
+                <a href="#home" class="font-serif text-3xl font-bold text-white">Puspita Wedding Gallery</a>
+                <p class="text-gray-400 mt-2 mb-6">Mewujudkan Hari Bahagia Anda Bersama Kami.</p>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="https://www.instagram.com/puspitaawedding?igsh=ZTJ3a2k5YzlwdjVk" target="_blank" class="text-gray-400 hover:text-white transition duration-300"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6zm6.406-11.845a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z" clip-rule="evenodd" /></svg><span class="sr-only">Instagram</span></a>
+                    <a href="#" target="_blank" class="text-gray-400 hover:text-white transition duration-300"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg><span class="sr-only">Facebook</span></a>
+                    <a href="https://wa.me/6285869846490" target="_blank" class="text-gray-400 hover:text-white transition duration-300"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path clip-rule="evenodd" fill-rule="evenodd" d="M18.403 5.633A8.919 8.919 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.976 8.974 0 1.582.413 3.126 1.198 4.488L3 21l4.629-1.224a8.948 8.948 0 0 0 4.424 1.193h.006c4.947 0 8.975-4.027 8.975-8.973 0-2.39-.936-4.634-2.625-6.333Zm-6.35 13.812h-.003a7.446 7.446 0 0 1-3.798-1.041l-.272-.162-2.824.741.753-2.753-.177-.282a7.44 7.44 0 0 1-1.141-3.971c0-4.102 3.337-7.44 7.44-7.44a7.425 7.425 0 0 1 5.263 2.176 7.403 7.403 0 0 1 2.176 5.262c-.002 4.103-3.339 7.44-7.442 7.44Zm4.093-5.359c-.225-.113-1.327-.655-1.533-.73-.205-.075-.354-.112-.504.112s-.58.729-.711.879-.262.168-.486.056c-.225-.113-.947-.349-1.804-1.113-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393.112-.131.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666-.181-.435-.366-.377-.504-.383a.965.965 0 0 0-.428-.008.784.784 0 0 0-.558.262c-.187.188-.711.693-.711 1.696s.729 1.971.82 2.119.712 1.696 1.73 2.404c.142.102.268.163.38.21.316.135.6.196.793.243.28.07.492.06.656-.038.187-.112.58-.485.662-.952.083-.467.083-.867.056-.952s-.083-.15-.168-.262Z"/></svg><span class="sr-only">WhatsApp</span></a>
+                </div>
+                <div class="border-t border-gray-700 pt-6">
+                    <p class="text-gray-500 text-sm">&copy; 2025 Puspita Wedding Gallery. All Rights Reserved.</p>
+                    <!-- Tombol Lihat Kode -->
+                    <div class="mt-4">
+                        <button id="view-code-btn" class="text-sm text-gray-400 hover:text-white transition-colors duration-300"> Kode (MNA)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--MODUL UNTUK KODE -->
+    <div id="code-modal" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-4xl h-[90vh] flex flex-col">
+            <!-- Header Modal -->
+            <div class="flex justify-between items-center p-4 border-b">
+                <h3 class="font-bold text-lg text-gray-800">Kode Sumber Halaman</h3>
+                <button id="close-modal-btn" class="text-gray-500 hover:text-gray-900 text-3xl leading-none">&times;</button>
+            </div>
+            <!-- Tab Modul -->
+            <div class="border-b">
+                <nav class="flex space-x-1 p-2">
+                    <button class="code-tab active-tab" data-tab="html">index.html</button>
+                    <button class="code-tab" data-tab="css">style.css</button>
+                    <button class="code-tab" data-tab="js">script.js</button>
+                </nav>
+            </div>
+            <!-- Konten Modul -->
+            <div class="flex-grow overflow-auto bg-gray-50">
+                <div id="html-content" class="code-content">
+                    <pre><code class="language-html"><!-- Kode HTML akan dimuat JavaScript --></code></pre>
+                </div>
+                <div id="css-content" class="code-content hidden">
+                    <pre><code class="language-css"><!-- Kode CSS akan dimuat JavaScript --></code></pre>
+                </div>
+                <div id="js-content" class="code-content hidden">
+                    <pre><code class="language-javascript"><!-- Kode JavaScript akan dimuat JavaScript --></code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MODUL UNTUK ZOOM GAMBAR -->
+    <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-[60] p-4">
+        <img id="modal-image" src="" alt="Gambar Diperbesar" class="max-w-[90%] max-h-[90%] object-contain rounded-lg shadow-2xl">
+        <button id="close-image-modal-btn" class="absolute top-4 right-4 text-white text-4xl leading-none">&times;</button>
+    </div>
+
+    <!-- Prism.js Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    
+    <!-- Menghubungkan ke File JavaScript Kustom -->
+    <script src="script.js"></script>
+
+</body>
+</html>
